@@ -12,14 +12,14 @@ import { PaisService } from '../../services/pais.service';
 })
 export class PorPaisComponent {
 
-  termino: string = "";
   hayError: boolean = false;
+  termino: string = "";
   paises: Country[] = [];
-  stringPais: string = "País";
+  // stringPais: string = "País";
 
   constructor( private paisService: PaisService ) { }
 
-  buscar(termino: string){
+  buscar( termino: string ){
 
     this.hayError = false;
     this.termino =  termino;

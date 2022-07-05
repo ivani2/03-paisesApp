@@ -4,8 +4,9 @@
            name="termino"
            [(ngModel)]="termino"
            (input)="teclaPresionada()"
-           placeholder="Buscar {{ valorPlaceholder }}..." 
+           [placeholder]="placeholder"
            />
-</form>
-
-<!-- (input)="teclaPresionada( $event )" -->
+        </form>
+        
+        <!-- (input)="teclaPresionada( $event )" -->
+        <!-- placeholder="Buscar {{ valorPlaceholder }}..."  -->

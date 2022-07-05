@@ -9,7 +9,7 @@ import { debounceTime, Subject } from 'rxjs';
 })
 export class PaisInputComponent implements OnInit{
   
-  @Input () valorPlaceholder = "País";
+  @Input () placeholder = "";
   @Output() onEnter: EventEmitter<string> =  new EventEmitter();
   @Output() onDebounce: EventEmitter<string> = new EventEmitter();
 

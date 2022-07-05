@@ -4,9 +4,9 @@
 <div class="row">
     <div class="col">
         <app-pais-input 
-        [valorPlaceholder]="stringCapital"
         (onEnter)="buscar( $event )"
         (onDebounce)="sugerencias( $event )"
+        placeholder = "Buscar Capital..."
         ></app-pais-input>
     </div>
 </div>
@@ -15,11 +15,13 @@
 
 <div *ngIf="hayError"
      class="alert alert-danger">
-    No hay resultados para "{{ termino }}"
-</div>
-<hr>
-<div *ngIf="paises.length > 0" class="row">
-    <div class="col">
-        <app-pais-tabla [paises] = "paises"></app-pais-tabla>
+     No hay resultados para "{{ termino }}"
     </div>
-</div>
+    <hr>
+    <div *ngIf="paises.length > 0" class="row">
+        <div class="col">
+            <app-pais-tabla [paises] = "paises"></app-pais-tabla>
+        </div>
+    </div>
+    
+    <!-- [valorPlaceholder]="stringCapital" -->
